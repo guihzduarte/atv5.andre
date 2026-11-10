@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Frete - Uninassau (Uber Moto)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Cálculo de Frete</h1>
+      <p>Saída: <strong>Uninassau</strong> • Modalidade: <strong>Uber Moto</strong></p>
+    </header>
+
+    <form id="form-cep">
+      <label for="cep">Digite o CEP de destino:</label>
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="cep" 
+          placeholder="Ex: 60000-000" 
+          maxlength="9" 
+          required
+        >
+        <button type="submit" id="btn-calcular">Calcular</button>
+      </div>
+    </form>
+
+    <div id="mensagem-status" class="status oculto"></div>
+
+    <section id="resultado" class="resultado oculto">
+      <h2>Resumo da Entrega</h2>
+      <div class="info-item">
+        <span>Endereço:</span>
+        <strong id="res-endereco">-</strong>
+      </div>
+      <div class="info-item">
+        <span>Bairro / Cidade:</span>
+        <strong id="res-cidade">-</strong>
+      </div>
+      <div class="info-item">
+        <span>Distância estimada:</span>
+        <strong id="res-distancia">-</strong>
+      </div>
+      <div class="info-item destaque">
+        <span>Frete (Uber Moto):</span>
+        <strong id="res-preco">-</strong>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
